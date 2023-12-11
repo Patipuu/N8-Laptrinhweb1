@@ -10,7 +10,7 @@ function ListSellingProductphanloai(category, targetElementId) {
         if (!(product.phanloai === category)) {
             continue;
             }
-            s +=`<div class="itemproduct" id = "itemproduct" data-product-id="${product.id}">
+            s +=`<div class="itemproduct" id = "itemproduct">
                             <div>
                                 <a href="#">
                                     <img src="${product.img}" class="anh" data-doi="${product.doi}" style="width: 100%; height: 210px;"/>
@@ -37,26 +37,25 @@ function ListSellingProductphanloai(category, targetElementId) {
                         </div>`; 
                         
     }
-    const container = document.getElementById(targetElementId);
-    container.innerHTML = s;
+    document.getElementById(targetElementId).innerHTML = s;
+   
     var elements = document.querySelectorAll('.anh');
+
     elements.forEach(function (element) {
       handleImageHover(element);
     });
-    const productElements = container.getElementsByClassName("itemproduct");
- for (let i = 0; i < productElements.length; i++) {
-     let listItem = productElements[i];
-     listItem.addEventListener('click', function(event) {
-         // Retrieve the productId from the clicked element's data-product-id attribute
-         let productId = listItem.getAttribute('data-product-id');
-             let productURL = 'productInfomation.html?id=' + productId;
-             localStorage.setItem('productURL_' + productId, productURL);
-             window.location.href = productURL;
-         
-     });
   }
+ /*  function updatePrices() {
+    for (var i = 0; i < saleElements.length; i++) {
+        var originalPrice = parseFloat(priceElements[i].textContent.replace(/[^0-9.-]+/g, ""));
+        var discountPercentage = parseFloat(saleElements[i].textContent.replace(/[^0-9.-]+/g, ""));
+        var discountedPrice = calculateDiscountedPrice(originalPrice, discountPercentage);
 
-}
+        salePriceElements[i].textContent = formatWithCommas(discountedPrice);
+        priceElements[i].textContent = formatWithCommas(originalPrice);
+    }
+}  */
+
   function handleImageHover(element) {
     var initialImagePath = element.src;
     var hoverImagePath = element.dataset.doi;

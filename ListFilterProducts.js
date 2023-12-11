@@ -1,8 +1,6 @@
 function ListSellingProductFilter(mangdaloc, filterthuonghieu = [], filtergiaban = [], filtercpu = [], filtervga = [], filterssd = []) {
    // let searchResults = [];
     let s ='';
-    let totalFilteredProducts = 0;
-    const container = document.getElementById("item-selling-products");
     for (let i = 0; i < mangdaloc.length; i++) {
         const product = mangdaloc[i];
         var anh = product.img;
@@ -15,39 +13,39 @@ function ListSellingProductFilter(mangdaloc, filterthuonghieu = [], filtergiaban
         var ssd = product.ssd;
         var vga = product.vga;
         var lcd = product.lcd;
-        var price = removeCommas(product.price);
+        var price = product.price;
         console.log('filter.thuonghieu.length');
-        if (filterthuonghieu.length > 0 && !filterthuonghieu.includes(thuonghieu)) {
-            continue;
+        if (filterthuonghieu.length > 0) {
+            if (filterthuonghieu.includes(thuonghieu) == false)
+                continue;
         }
 
         if (filtergiaban.length > 0) {
-            if (price < 10000000 && !filtergiaban.includes('1')) {
-                continue;
-            }
-            if (price >= 10000000 && price <= 15000000 && !filtergiaban.includes('2')) {
-                continue;
-            }
-            if (price > 15000000 && price <= 25000000 && !filtergiaban.includes('3')) {
-                continue;
-            }
-            if (price > 25000000 && !filtergiaban.includes('4')) {
-                continue;
-            }
+            if (removeCommas(price) < 10000000 && !filtergiaban.includes('1')) continue;
+            if (removeCommas(price) >= 10000000 && removeCommas(price) <= 15000000 && !filtergiaban.includes('2')) continue;
+            if (removeCommas(price) > 15000000 && removeCommas(price) <= 25000000 && !filtergiaban.includes('3')) continue;
+            if (removeCommas(price) > 25000000 && !filtergiaban.includes('4')) continue;
         }
 
-        if (filtercpu.length > 0 && !filtercpu.some(cpuValue => product.cpu.includes(cpuValue))) {
-            continue;
+        if (filtercpu.length > 0) {
+           if(cpu.includes(filtercpu) == false)
+             continue;
         }
 
-        if (filterssd.length > 0 && !filterssd.some(ssdValue => product.ssd.includes(ssdValue))) {
-            continue;
-        }
-
-        if (filtervga.length > 0 && !filtervga.some(vgaValue => product.vga.includes(vgaValue))) {
-            continue;
-        }
-        s+=`<div class="itemproduct" id = "itemproduct" data-product-id="${product.id}">
+        if (filterssd.length > 0) {
+            if(ssd.includes(filterssd) == false)
+              continue;
+         }
+         if (filtervga.length > 0) {
+            if(vga.includes(filtervga) == false)
+              continue;
+         }
+        if(filterthuonghieu.length > 0 || filtergiaban.length > 0 || filtercpu.length > 0 || filtergiaban.length > 0)
+      //  searchResults.push(product);
+        textss = document.getElementById('filter-result');
+        textss.innerHTML = "Laptop";
+       
+        s+=`<div class="itemproduct" id = "itemproduct">
                 <div>
                     <a href="#">
                         <img src="${anh}" class="anh" data-doi="${doi}" style="width: 100%; height: 210px;"/>
@@ -72,46 +70,14 @@ function ListSellingProductFilter(mangdaloc, filterthuonghieu = [], filtergiaban
                     </div>                    
                 </div>
             </div>`;   
-            totalFilteredProducts++;
     }
-    localStorage.setItem('totalFilteredProducts', JSON.stringify(totalFilteredProducts));
-    container.innerHTML = s;  
-    // Hiển thị tổng số sản phẩm
-    document.getElementById('total-products-message').innerText = `Sản phẩm (${totalFilteredProducts})`;
-    var checkdivproduct = document.querySelector('.selling-products');
-    var checkdivpagenumber = document.getElementById('pagenumber2');
-    var checkinnertext = document.getElementById('filter-result');
-    if (totalFilteredProducts == 0) {
-        if (checkdivproduct) {
-            checkdivproduct.style.display = 'none';
-        }
-        if (checkdivpagenumber) {
-            checkdivpagenumber.style.display = 'none';
-        }
-        checkinnertext.style.display = 'block';
-        checkinnertext.innerText = `Không tìm thấy kết quả phù hợp.`;
-    }
-    else{
-        checkdivproduct.style.display = 'block';
-        checkdivpagenumber.style.display = 'block';
-        checkinnertext.style.display = 'none';
-    }
-    
-    const productElements = container.getElementsByClassName("itemproduct");
-    for (let i = 0; i < productElements.length; i++) {
-    let listItem = productElements[i];
-    listItem.addEventListener('click', function(event) {
-        // Retrieve the productId from the clicked element's data-product-id attribute
-        let productId = listItem.getAttribute('data-product-id');
-            let productURL = 'productInfomation.html?id=' + productId;
-            localStorage.setItem('productURL_' + productId, productURL);
-            window.location.href = productURL;
-        
-    });
+    document.getElementById("item-selling-products").innerHTML = s;
     thisPageloc = document.querySelectorAll('.item-selling-products .itemproduct');
     var phantrangloc = document.getElementById('pagenumber2');
     showPage(thisPageloc, phantrangloc);
+
     var elements = document.querySelectorAll('.anh');
+
     elements.forEach(function (element) {
       handleImageHover(element);
     });
@@ -121,7 +87,7 @@ function ListSellingProductFilter(mangdaloc, filterthuonghieu = [], filtergiaban
 
 const urlParams = new URLSearchParams(window.location.search);
 const filterTerm = urlParams.get('Filter');
-}
+
 function filteritem() {
     var arrthuonghieu = document.getElementsByClassName("thuonghieu");
     var filterthuonghieu = [];
@@ -134,6 +100,8 @@ function filteritem() {
     for(var i = 0; i< arrgiaban.length; i++){
         if(arrgiaban[i].checked) filtergiaban.push(arrgiaban[i].value);
     }
+
+
     var arrcpu = document.getElementsByClassName("cpu");
     var filtercpu = [];
     for(var i=0; i< arrcpu.length; i++){
@@ -159,31 +127,28 @@ function filteritem() {
 function removeCommas(inputString) {
     return inputString.replace(/,/g, '');
 }
+
+
 //Mảng giá trị lọc
 // Tạo một mảng để lưu trữ thông tin từ các phần tử
 //Lấy giá trị mảng sản phẩm từ LocalStorage
 /// Lấy dữ liệu từ local storage và chuyển đổi thành đối tượng JavaScript
-//  brandarray = JSON.parse(localStorage.getItem('brandarray'));
-// console.log(brandarray);
-// var listbrandfilter = `<ul id="listthuonghieu-checkbox" class="listcheckbox">`;
-// // Kiểm tra xem filtertest có tồn tại và có chứa ít nhất một phần tử không
-// for(var i=0; i< brandarray.length; i++) {
-//     // Tạo chuỗi HTML cho danh sách các thương hiệu
-//     console.log(brandarray[i]);
-//     listbrandfilter += `
-//         <li>
-//             <label id="label-item-search">
-//                 <input type="checkbox" onchange="filteritem()" class="thuonghieu" value="${brandarray[i]}">${brandarray[i]}
-//             </label>
-//         </li>`;
-//         listbrandfilter += `</ul>`;
+ brandarray = JSON.parse(localStorage.getItem('brandarray'));
+console.log(brandarray);
+var listbrandfilter = `<ul id="listthuonghieu-checkbox" class="listcheckbox">`;
+// Kiểm tra xem filtertest có tồn tại và có chứa ít nhất một phần tử không
+for(var i=0; i< brandarray.length; i++) {
+    // Tạo chuỗi HTML cho danh sách các thương hiệu
+    console.log(brandarray[i]);
+    listbrandfilter += `
+        <li>
+            <label id="label-item-search">
+                <input type="checkbox" onchange="filteritem()" class="thuonghieu" value="${brandarray[i]}">${brandarray[i]}
+            </label>
+        </li>`;
+        listbrandfilter += `</ul>`;
 
-//     // Gán chuỗi HTML vào một phần tử có id="listthuonghieu-checkbox"
-//     document.getElementById('listthuonghieu-checkbox').innerHTML = listbrandfilter;
-// }
-
-
-
-
-
+    // Gán chuỗi HTML vào một phần tử có id="listthuonghieu-checkbox"
+    document.getElementById('listthuonghieu-checkbox').innerHTML = listbrandfilter;
+}
 

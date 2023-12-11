@@ -99,7 +99,7 @@ var ArrayListProducts = [
     },
     {
         id:"0009",
-thuonghieu:"Hp",
+        thuonghieu:"Hp",
         phanloai:"gaming",
         img: "../imageDoAn/vp9.jpg",
         doi: "../imageDoAn/vp9.2.jpg",
@@ -160,9 +160,9 @@ thuonghieu:"Hp",
         img: "../imageDoAn/vp13.webp",
         doi: "../imageDoAn/vp13.2.webp",
         name: "ASUS VivoBook M513UA-L1221T (R5-5500U | 8GB | 512GB | AMD Radeon Graphics | 15.6' FHD | Win 10)",
-        cpu: "AMD Ryzen 3 3500U",
-        ram: "4GB DDR4 3200Mhz",
-        ssd: "256G PCIe NVMe",
+        cpu: "",
+        ram: "",
+        ssd: "",
         vga: "RTX 3070",
         price: "15,000,000",
         giam: "-20%",
@@ -188,7 +188,7 @@ thuonghieu:"Hp",
         img: "../imageDoAn/dh1.gif",
         doi: "../imageDoAn/dh1.2.png",
         name: "Acer Nitro 5 Outlet New I5-12500H 16GB 512GB RTX 3050Ti 15.6' FHD 144Hz",
-        cpu: "Intel Core i5 12500H",
+        cpu: "Core i5 12500H",
         ram: "16GB DDR4",
         ssd: "512GB Pcie",
         vga: "RTX 3070",
@@ -198,11 +198,11 @@ thuonghieu:"Hp",
     {
         id:"0016",
         thuonghieu:"Lenovo",
-phanloai:"dohoa",
+        phanloai:"dohoa",
         img: "../imageDoAn/dh10.webp",
         doi: "../imageDoAn/dh11.webp",
         name: "Lenovo LOQ 2023 15IRH8 Core™ I5-13420H, RAM 8GB, SSD 1TB, RTX 3050, FHD",
-        cpu: "Intel Core i5 1350H",
+        cpu: "Core i5 1350H",
         ram: "8GB DDR5",
         ssd: "1 TB M.2 PCIe NVMe",
         vga: "RTX 3070 Ti ",
@@ -216,7 +216,7 @@ phanloai:"dohoa",
         img: "../imageDoAn/dh4.webp",
         doi: "../imageDoAn/dh4.2.webp",
         name: "MSI Cyborg 15 A12UDX-621VN i5-12450H 8GB 512GB GeForce RTX 3050 4GB 15.6 FHD 144Hz",
-        cpu: "Intel Core i5 12450H",
+        cpu: "Core i5 12450H",
         ram: "8GB DDR5",
         ssd: "512GB Pcie",
         vga: "RTX 3070 Ti",
@@ -230,7 +230,7 @@ phanloai:"dohoa",
         img: "../imageDoAn/dh5.2.png",
         doi: "../imageDoAn/dh5.3.png",
         name: "HP Victus 15-Fa0115TX (7C0X1PA) I5-12500H | 8GB | 512GB | GeForce RTX™ 3050 4GB | 15.6' FHD 144Hz",
-        cpu: "Intel Core i5 12500H",
+        cpu: "Core i5 12500H",
         ram: "8GB DDR5",
         ssd: "512G PCIe M.2",
         vga: "RTX 3070 Ti",
@@ -272,7 +272,7 @@ phanloai:"dohoa",
         img: "../imageDoAn/dh8.webp",
         doi: "../imageDoAn/dh8.2.webp",
         name: "MSI Cyborg 15 A12VE-412VN I5-12450H 8GB 512GB GerForce RTX4050 15.6 FHD 144Hz",
-        cpu: "Intel Core i5 12450H",
+        cpu: "Core i5 12450H",
         ram: "8GB DDR5",
         ssd: "512GB Pciee",
         vga: "GeForce RTX 4050 6GB",
@@ -286,12 +286,12 @@ phanloai:"dohoa",
         img: "../imageDoAn/dh9.webp",
         doi: "../imageDoAn/dh9.2.webp",
         name: "Acer Nitro 5 Tiger AN515-58-52SP I5-12500H 8GB 512GB RTX 3050 15.6' FHD 144Hz",
-        cpu: "Intel Core i7 12700H",
+        cpu: "Core i7 12700H",
         ram: "8GB DDR4",
         ssd: "512GB Pcie",
         vga: "RTX3050 4GB",
         price: "22,990,000",
-giam: "-20%",
+        giam: "-20%",
     },
     {
         id:"0023",
@@ -303,7 +303,7 @@ giam: "-20%",
         cpu: "AMD Ryzen R5 6600H",
         ram: "16GB DDR5",
         ssd: "512G PCIe M.2",
-        vga: "RTX 3050Ti",
+        vga: "RTX 3050Tis",
         price: "26,500,000",
         giam: "-20%",
     },
@@ -314,7 +314,7 @@ giam: "-20%",
         img: "../imageDoAn/dh11.webp",
         doi: "../imageDoAn/dh11.2.gif",
         name: "MSI Katana 15 I7-13620H Ram 16GB 1TB SSD GeForce RTX 4070 15.6' FHD 144Hz",
-        cpu: "Intel Core i7 13620H",
+        cpu: "Core i7 13620H",
         ram: "16GB DDR5",
         ssd: "1TB PCIe M.2",
         vga: "RTX 4070 8GBs",
@@ -328,7 +328,7 @@ giam: "-20%",
         img: "../imageDoAn/dh5.webp",
         doi: "../imageDoAn/dh1.2.png",
         name: "Dell G16 7620 I7-12700H RTX3060 16GB SSD 1TB 16', QHD 165Hz",
-        cpu: "Intel Core i7 12700H",
+        cpu: "Core i7 12700H",
         ram: "16GB DDR5",
         ssd: "1TB M.2 PCIe NVMe",
         vga: "RTX 3060 6GB",
@@ -342,7 +342,7 @@ giam: "-20%",
         img: "../imageDoAn/vp12.2.jpg",
         doi: "../imageDoAn/vp11.png",
         name: "HP 14-DQ2031TG NEW I3-1125G4 4GB 128GB PCIE 14.0 FHD WIN10 Silver",
-        cpu: "Intel Core i7 11800H",
+        cpu: "Core i7 11800H",
         ram: "16GB DDR4",
         ssd: "1TB M.2 PCIe",
         vga: "RTX 3070 8GB",
@@ -383,7 +383,7 @@ giam: "-20%",
         phanloai:"doanhnhan",
         img: "../imageDoAn/dn3.png",
         doi: "../imageDoAn/dn3.2.png",
-name: "ASUS ZenBook 14 Flip OLED UP3404VA-KN039W (I7-1360P | 16GB | 512GB | Intel Iris Xe Graphics | 14' WQXGA+ OLED 100% DCI-P3 Touch | Win 11)",
+        name: "ASUS ZenBook 14 Flip OLED UP3404VA-KN039W (I7-1360P | 16GB | 512GB | Intel Iris Xe Graphics | 14' WQXGA+ OLED 100% DCI-P3 Touch | Win 11)",
         cpu: "Intel Core i7 1360P",
         ram: "16G DDR5 4800Mhz",
         ssd: "512 PCIe NVMe",
@@ -426,7 +426,7 @@ name: "ASUS ZenBook 14 Flip OLED UP3404VA-KN039W (I7-1360P | 16GB | 512GB | Inte
         img: "../imageDoAn/dn6.gif",
         doi: "../imageDoAn/dn6.2.gif",
         name: "Asus Zenbook 14 Q410VA Core I5 13500H, RAM 8GB, SSD 512GB, OLED",
-        cpu: "Intel Core i5 13500H",
+        cpu: "Core i5 13500H",
         ram: "8GB DDR5",
         ssd: "512GB Pcie",
         vga: "Intel® Iris® Xe Graphics",
@@ -465,7 +465,7 @@ name: "ASUS ZenBook 14 Flip OLED UP3404VA-KN039W (I7-1360P | 16GB | 512GB | Inte
         id:"0035",
         thuonghieu:"Asus",
         phanloai:"doanhnhan",
-img: "../imageDoAn/dn8.png",
+        img: "../imageDoAn/dn8.png",
         doi: "../imageDoAn/dn8.2.png",
         name: "Asus Zenbook Q409ZA Core™ I5-1240P RAM 8GB SSD 256GB OLED",
         cpu: "Intel Core i5 1240P",
@@ -482,7 +482,7 @@ img: "../imageDoAn/dn8.png",
         img: "../imageDoAn/dn2.png",
         doi: "../imageDoAn/dn3.2.png",
         name: "Asus Zenbook Q420VA Gen 13th Core I7 13700H, RAM 16GB, SSD 512GB, OLED",
-        cpu: "Intel Core i7 13700H",
+        cpu: "Core i7 13700H",
         ram: "16GB DDR5",
         ssd: "512GB Pcie",
         vga: "Intel® Iris® Xe Graphics",
@@ -557,8 +557,6 @@ const storedArray = JSON.parse(storedJsonString)
 //Hàm duyệt tất cả sản phẩm
 function ListProducts(storedArray) {
     let searchResults = [];
-    let totalFilteredProducts = 0;
-    const container = document.getElementById("item-selling-products");
      let s ='';
      for (let i = 0; i < storedArray.length; i++) {
          const product = storedArray[i];
@@ -574,7 +572,7 @@ function ListProducts(storedArray) {
          var lcd = product.lcd;
          var price = product.price;
         searchResults.push(product);
-         s+=`<div class="itemproduct" id = "itemproduct" data-product-id="${product.id}">
+         s+=`<div class="itemproduct" id = "itemproduct">
                  <div>
                      <a href="#">
                          <img src="${anh}" class="anh" data-doi="${doi}" style="width: 100%; height: 210px;"/>
@@ -585,13 +583,13 @@ function ListProducts(storedArray) {
                      <div id="cpu"><img src="../imageDoAn/cpu.png" width="9%">
                          <span>&nbsp; ${cpu}</span>
                      </div>
-                     <div id="ram"><img src="../imageDoAn/ram.png" width="9%">
+                     <div id="ram"><img src="./css/image/ram.png" width="9%">
                          <span>&nbsp; ${ram}</span>
                      </div>                    
-                     <div id="ssd"><img src="../imageDoAn/ssd.png" width="7%">
+                     <div id="ssd"><img src="./css/image/ssd.png" width="7%">
                          <span>&nbsp; ${ssd}</span>
                      </div>                    
-                     <div id="vga"><img src="../imageDoAn/vga-card.png" width="8%">
+                     <div id="vga"><img src="./css/image/vga-card.png" width="8%">
                          <span>&nbsp; ${vga}</span>
                      </div>                    
                      <div id="price">
@@ -599,63 +597,27 @@ function ListProducts(storedArray) {
                      </div>                    
                  </div>
              </div>`;   
-             totalFilteredProducts++;
      }
-    container.innerHTML = s;   
-    // Hiển thị tổng số sản phẩm
-    document.getElementById('total-products-message').innerText = `Sản phẩm (${totalFilteredProducts})`; 
-    var checkdivproduct = document.querySelector('.selling-products');
-    var checkdivpagenumber = document.getElementById('pagenumber2');
-    var checkinnertext = document.getElementById('filter-result');
-    if (totalFilteredProducts == 0) {
-        if (checkdivproduct) {
-            checkdivproduct.style.display = 'none';
-        }
-        if (checkdivpagenumber) {
-            checkdivpagenumber.style.display = 'none';
-        }
-        checkinnertext.style.display = 'block';
-checkinnertext.innerText = `Không tìm thấy kết quả phù hợp.`;
-    }
-    else{
-        checkdivproduct.style.display = 'block';
-        checkdivpagenumber.style.display = 'block';
-        checkinnertext.style.display = 'none';
-    }
-//CHECK KIỂM TRA NẾU KHÔNG CÓ SẢN PHẨM SẼ KHÔNG HIỆN NÚT PHÂN TRANG
-var phantrangloc = document.getElementById('pagenumber2');
-    const productElements = container.getElementsByClassName("itemproduct");
-    for (let i = 0; i < productElements.length; i++) {
-    let listItem = productElements[i];
-    listItem.addEventListener('click', function(event) {
-         // Retrieve the productId from the clicked element's data-product-id attribute
-         let productId = listItem.getAttribute('data-product-id');
-             let productURL = 'productInfomation.html?id=' + productId;
-             localStorage.setItem('productURL_' + productId, productURL);
-             window.location.href = productURL;
-         
-     });
-   //  localStorage.setItem('filteredProducts', JSON.stringify(filteredProducts));
-     
- }
+    document.getElementById("item-selling-products").innerHTML = s;
     thisPageloc = document.querySelectorAll('.item-selling-products .itemproduct');
     var phantrangloc = document.getElementById('pagenumber2');
     showPage(thisPageloc, phantrangloc);
     var elements = document.querySelectorAll('.anh');
+
     elements.forEach(function (element) {
       handleImageHover(element);
     });
      localStorage.setItem('SearchResult', JSON.stringify(searchResults)); //Lưu mảng searchresult vào local
-}
-//Gọi đến nút laptop 
+    
+   //Gắn phân trang vào đây
+     
+ }
+//Gọi đến nút laptop để mở ra tất cả sản phẩm
 var productsclick = document.getElementById('laptop');
 productsclick.addEventListener('click', function () {
     document.getElementById('container-none-filter').style.display = 'none';
     document.getElementById('container-filter-search').style.display = 'block';
     ListProducts(storedArray);
-    document.getElementById('innertimkiem').innerHTML = `TÌM KIẾM`;
-    // Hiển thị kết quả tìm kiếm
-    document.getElementById('innertextketqua').innerHTML = `LAPTOP`;
     //runFilter();
     return false;
 });
@@ -667,28 +629,18 @@ function removeCommas(inputString) {
 
 //Hàm chứa kết quả tìm kiếm
 // Hàm tìm kiếm sản phẩm theo tên
-function searchProducts(searchValue) {
+function searchProducts() {
     // Nhận giá trị từ ô tìm kiếm
-    var searchValue = searchValue.value.toLowerCase();
+    var searchValue = document.getElementById('search').value.toLowerCase();
     localStorage.setItem('SearchValue', JSON.stringify(searchValue)); // Lưu giá trị tìm kiếm vào local
     // Lấy giá trị tìm kiếm từ LocalStorage
     const storedSearchValueString = localStorage.getItem('SearchValue');
     const storedSearchValue = JSON.parse(storedSearchValueString);
     console.log(storedSearchValue); // Xuất thử giá trị tìm kiếm
+
     // Lọc sản phẩm dựa trên giá trị tìm kiếm
     const searchResults = storedArray.filter(product => product.name.toLowerCase().includes(storedSearchValue));
-    if (searchResults.length > 0) {
-ListProducts(searchResults);
-        document.getElementById('innertimkiem').innerHTML = `TÌM KIẾM`;
-        // Hiển thị kết quả tìm kiếm
-        document.getElementById('innertextketqua').innerHTML = `Tìm kiếm theo <b>${searchValue}</b>`;
-        // Hiển thị tổng số sản phẩm
-        document.getElementById('total-products-message').innerText = `Sản phẩm (${searchResults.length})`;
-    } else {
-        document.getElementById('container-filter-search').style.display = 'none';
-        // Hiển thị thông báo lỗi
-        document.getElementById('filter-result').innerText = `Không tìm thấy kết quả phù hợp.`;
-    }
+    ListProducts(searchResults);
 }
 
 
@@ -697,252 +649,11 @@ var Btnsearch = document.getElementById('btn-search');
     Btnsearch.addEventListener('click', function (event) {
     document.getElementById('container-none-filter').style.display = 'none';
     document.getElementById('container-filter-search').style.display = 'block';
-    //document.getElementById('filterthuonghieu').style.display = 'none';
-    document.getElementById('innertimkiem').innerText = `TÌM KIẾM`;
     event.preventDefault(); // Ngăn chặn sự kiện mặc định của form
-    var Value = document.getElementById('search');
-    searchProducts(Value);
+    searchProducts();
     //runFilter();
  });
 
-// Truy xuất giá trị trong bảng laptop ở danh mục
-function DanhMucLapTop(element) {
-    document.getElementById('container-none-filter').style.display = 'none';
-    document.getElementById('container-filter-search').style.display = 'block';
-    const filter = {
-        brand: null,
-        price: null,
-        cpu: null,
-        vga: null,
-        ssd: null,
-        phanloai: null,
-    };
-    // Lấy giá trị của thuộc tính 'value' từ thẻ <a> được nhấp
-    var filterValue = element.getAttribute("value");
-   
-    // So sánh mảng các mục cần tìm
-    if (['1', '2', '3', '4'].includes(filterValue)) {
-        filter.price = filterValue;
-    } else if (['ASUS', 'ACER', 'MSI', 'LENOVO', 'DELL', 'HP', 'APPLE'].includes(filterValue)) {
-        filter.brand = filterValue;
-    } else if (['Intel Core i3', 'Intel Core i5', 'Intel Core i7', 'Intel Core i9', 'ADM Ryzen', 'Xeon'].includes(filterValue)) {
-        filter.cpu = filterValue;
-    } else if (['oldgaming', 'oldvanphong', 'new99', 'vanphong', 'gaming', 'doanhnhan', 'dohoa'].includes(filterValue)) {
-        filter.phanloai = [filterValue];
-    }
-    //Mảng các hãng sản phẩm để lọc sau khi chọn theo từng hãng
-    const BrandArray = filter.brand ? [filter.brand] : ['ASUS', 'ACER', 'MSI', 'LENOVO', 'DELL', 'HP', 'APPLE'];
-    localStorage.setItem('BrandArray', JSON.stringify(BrandArray));
-    MakeLi(BrandArray);
-    localStorage.setItem('filter',JSON.stringify(filter));
-    //console.log(filter.brand);
-    localStorage.setItem('filterBrand', JSON.stringify(filter.brand));
-    localStorage.setItem('filterPrice', JSON.stringify(filter.price));
-localStorage.setItem('filterVga', JSON.stringify(filter.vga));
-    localStorage.setItem('filterSsd', JSON.stringify(filter.ssd));
-    localStorage.setItem('filterCpu', JSON.stringify(filter.cpu));
-    localStorage.setItem('filterPhanloai', JSON.stringify(filter.phanloai));
-    console.log("Giá trị đã chọn: " + filterValue);
-    console.log(filter);
-    // var index = LocalFilterValue.length;
-    // if (index > 1) {
-    //     LocalFilterValue.splice(0, 1);
-    // }
-    // console.log(LocalFilterValue);
-    
-    // // Lưu filter vào LocalStorage
-    // localStorage.setItem('LocalFilterValue', JSON.stringify(LocalFilterValue));
 
-    // // Lấy giá trị mảng sản phẩm từ LocalStorage
-    const storedJsonString = localStorage.getItem('ArrayListProducts');
-    const storedArray = JSON.parse(storedJsonString);
-    const filterBrand = JSON.parse(localStorage.getItem('filterBrand')) || [];
-    const filterPrice = JSON.parse(localStorage.getItem('filterPrice')) || [];
-    const filterCpu = JSON.parse(localStorage.getItem('filterCpu')) || [];
-    const filterVga = JSON.parse(localStorage.getItem('filterVga')) || [];
-    const filterPhanloai = JSON.parse(localStorage.getItem('filterPhanloai')) || [];
-    const filterSsd = JSON.parse(localStorage.getItem('filterSsd')) || [];
-    // // Gọi hàm lọc sản phẩm
-    filtervaluelaptop = JSON.parse(localStorage.getItem('filter'));
-    console.log(filtervaluelaptop.brand);
-    const listfilterproducts = FilterListInMenu(storedArray, filterBrand, filterPrice, filterCpu, filterVga, filterSsd, filterPhanloai);
-    ListProducts(listfilterproducts);
-    //THAY ĐỔI TEXT CHO KẾT QUẢ PHÂN LOẠI
-    for(let i=0; i<filterPhanloai.length; i++){
-        if(filterPhanloai[i] === 'gaming')
-        {
-            filterPhanloai[i] = 'Gaming';
-        }
-        if(filterPhanloai[i] === 'doanhnhan')
-        {
-            filterPhanloai[i] = 'Doanh Nhân';
-        }if(filterPhanloai[i] === 'dohoa')
-        {
-            filterPhanloai[i] = 'Đồ Họa';
-        }
-    }
-     // Cập nhật giá trị mới của filterPhanloai vào localStorage
-     localStorage.setItem('filterPhanloai', JSON.stringify(filterPhanloai));
-    if (listfilterproducts.length > 0) {
-        ListProducts(listfilterproducts);
-        document.getElementById('innertimkiem').innerHTML = `TÌM KIẾM`;
-        if(filterBrand){
-            // Hiển thị kết quả tìm kiếm
-            document.getElementById('innertextketqua').innerHTML = `LAPTOP <b>${filterBrand} ${filterPhanloai}</b>`;
-        }
-        // Hiển thị tổng số sản phẩm
-        document.getElementById('total-products-message').innerText = `Sản phẩm (${listfilterproducts.length})`;
-    } else {
-        document.getElementById('container-filter-search').style.display = 'none';
-        // Hiển thị thông báo lỗi
-document.getElementById('filter-result').innerText = `Không tìm thấy kết quả phù hợp.`;
-    }
-    
-}
-// Gán sự kiện nhấp chuột cho tất cả các thẻ <a> có lớp là 'sub-megamenu-item-filter'
-var filterLinks = document.querySelectorAll('.sub-megamenu-item-filter');
-filterLinks.forEach(function(link) {
-    link.addEventListener('click', function() {
-        DanhMucLapTop(this);
-    });
-});
-var filterLinks = document.querySelectorAll('.textphanloai');
-filterLinks.forEach(function(link) {
-    link.addEventListener('click', function() {
-        DanhMucLapTop(this);
-    });
-});
-function FilterListInMenu(mangdaloc, filterthuonghieu = [], filtergiaban = [], filtercpu = [], filtervga = [], filterssd = [], filterphanloai = []) {
-    let listfilterproducts = []; // Mảng để lưu trữ kết quả lọc
-    for (let i = 0; i < mangdaloc.length; i++) {
-        const product = mangdaloc[i];
-        var thuonghieu = product.thuonghieu.toUpperCase();
-        var phanloai = product.phanloai;
-        var cpu = product.cpu;
-        var ssd = product.ssd;
-        var vga = product.vga;
-        var price = product.price;
-        
-        if (filterthuonghieu.length > 0 && !filterthuonghieu.includes(thuonghieu)) {
-            continue;
-        }
-        console.log(removeCommas(price));
-        if (filtergiaban.length > 0) {
-            if (removeCommas(price) < 10000000 && !filtergiaban.includes('1')) {
-                continue;
-            }
-            if (removeCommas(price) >= 10000000 && removeCommas(price) <= 15000000 && !filtergiaban.includes('2')) {
-                continue;
-            }
-            if (removeCommas(price) > 15000000 && removeCommas(price) <= 25000000 && !filtergiaban.includes('3')) {
-                continue;
-            }
-            if (removeCommas(price) > 25000000 && !filtergiaban.includes('4')) {
-                continue;
-            }
-        }
-
-        if (filtercpu.length > 0 && !cpu.includes(filtercpu)) {
-            continue;
-        }
-
-        // if (filterssd.length > 0 && !filterssd.some(ssdValue => product.ssd.includes(ssdValue))) {
-        //     continue;
-        // }
-
-        // if (filtervga.length > 0 && !filtervga.some(vgaValue => product.vga.includes(vgaValue))) {
-        //     continue;
-        // }
-        if (filterphanloai.length > 0 && !filterphanloai.includes(phanloai)) {
-            continue;
-        }
-
-
-        // Nếu sản phẩm thỏa mãn tất cả điều kiện, thêm vào mảng kết quả
-        listfilterproducts.push(product);
-    }
-
-    return listfilterproducts;
-}
-
-//Mảng giá trị lọc
-// Tạo một mảng để lưu trữ thông tin từ các phần tử
-//Lấy giá trị mảng sản phẩm từ LocalStorage
-/// Lấy dữ liệu từ local storage và chuyển đổi thành đối tượng JavaScript
-
-BrandArray = JSON.parse(localStorage.getItem('BrandArray'));
-function MakeLi(BrandArray) {
-    console.log(BrandArray);
-    var listCheckboxElements = document.querySelector('.listcheckbox');
-    var listbrandfilter = '';
-    for (var i = 0; i < BrandArray.length; i++) {
-// Tạo chuỗi HTML cho danh sách các thương hiệu
-        console.log(BrandArray[i]);
-        listbrandfilter += `
-            <li>
-                <label id="label-item-search">
-                    <input type="checkbox" onchange="filteritem()" class="thuonghieu" onclick="paginationElement.style.display = 'block';" value="${BrandArray[i]}">${BrandArray[i]}
-                </label>
-            </li>`;
-    }
-    // Gán chuỗi HTML vào tất cả các phần tử có class="thuonghieu"
-    listCheckboxElements.innerHTML = listbrandfilter;
-}
-
-
-//HIỆN TẤT CẢ SẢN PHẨM, VÀ HIỆN LẠI PHÂN TRANG KHI LỌC SẢN PHẨM
-var showAllProductsButton = document.getElementById('total-products-message');
-var paginationElement = document.getElementById('pagenumber2');
-var productContainer = document.getElementById('item-selling-products');
-var productElements = productContainer.getElementsByClassName('itemproduct');
-
-// Mặc định là đang ẩn chức năng hiển thị tất cả sản phẩm
-var showAllProductsEnabled = false;
-
-// Sự kiện click cho nút hiển thị tất cả sản phẩm
-showAllProductsButton.addEventListener('click', function() {
-    // Ẩn phân trang
-    paginationElement.style.display = 'none';
-
-    // Hiển thị tất cả sản phẩm
-    for (let i = 0; i < productElements.length; i++) {
-        let listItem = productElements[i];
-        listItem.style.display = 'block';
-    }
-
-    // Cập nhật trạng thái hiện tại
-    showAllProductsEnabled = true;
-});
-
-// Sự kiện click cho checkbox của trang
-var checkboxLists = document.querySelectorAll('.listcheckbox input[type="checkbox"]');
-checkboxLists.forEach(function(checkbox) {
-    checkbox.addEventListener('change', function(event) {
-        var clickedElement = event.target;
-        // Nếu người dùng click vào một thao tác khác, áp dụng lại phân trang
-        if (clickedElement.id !== 'total-products-message' && showAllProductsEnabled) {
-            // Hiển thị lại phân trang
-            var checkdivproduct = document.querySelector('.selling-products');
-    var checkdivpagenumber = document.getElementById('pagenumber2');
-    var checkinnertext = document.getElementById('filter-result');
-    if (totalFilteredProducts == 0) {
-        if (checkdivproduct) {
-            checkdivproduct.style.display = 'none';
-        }
-        if (checkdivpagenumber) {
-            checkdivpagenumber.style.display = 'none';
-        }
-        checkinnertext.style.display = 'block';
-        checkinnertext.innerText = `Không tìm thấy kết quả phù hợp.`;
-    }
-    else{
-        checkdivproduct.style.display = 'block';
-        checkdivpagenumber.style.display = 'block';
-        checkinnertext.style.display = 'none';
-    }
-    
-            // Cập nhật trạng thái hiện tại
-            showAllProductsEnabled = false;
-        }
-    });
-});
+//Click vào các phần tử thương hiệu 
+ 

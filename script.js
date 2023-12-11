@@ -32,8 +32,7 @@ iconclose.addEventListener('click',()=>{
 //Kiểm tra tính hợp lệ của email
 function validateEmail(email) 
 {
-  const regex= /^[^\s@]+@gmail\.com$/;
-  //const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   return regex.test(email);
 }
 
@@ -52,12 +51,11 @@ function arePasswordsMatching(password, checkpassword)
   return password === checkpassword;
 }
 
-function isEmailExists(email) {
-  var users = JSON.parse(localStorage.getItem('users')) || [];
 
-  // Check if the email exists in the users array
-  return users.some(user => user.email === email);
-}
+
+
+
+
 
 
 //localStorage cho trang đăng ký lưu trữ thông tin
@@ -76,24 +74,18 @@ function signup() {
 
   // Lấy xác nhận mật khẩu từ input
   var checkpassword = document.getElementById('checkpassword').value;
-  if (isEmailExists(email)) {
-    alert('Email đã tồn tại');
-    return;
-  } 
+
   // Kiểm tra email đã hợp lệ chưa 
   if (!validateEmail(email)) {
-      alert("Email không hợp lệ! Vui lòng nhập tài khoản có đuôi @gmail.com");
+      alert("Email không hợp lệ!");
       return;
   }
 
   // Kiểm tra mật khẩu mạnh hay yếu
   if (!checkPassword(password)) {
-      alert("Mật khẩu của bạn chưa đủ mạnh! Hãy đặt mật khẩu có chữ cái viết hoa và có số !" 
-      );
+      alert("Mật khẩu của bạn chưa đủ mạnh!");
       return;
   }
-  
-  
 
   // Kiểm tra độ trùng khớp giữa xác nhận mật khẩu và mật khẩu
   var passwordsMatch = arePasswordsMatching(password, checkpassword);
@@ -202,3 +194,18 @@ function logout() {
   }
 }
 
+/*
+var regex = /^(?=.*d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+if(regex.test(password)) {
+  console.log("Password is valid");
+} else {
+  console.log("Password is invalid");
+} */
+
+
+/* 
+function checkPassword(password) {
+ var regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+ return regex.test(password);
+}
+*/

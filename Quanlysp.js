@@ -47,6 +47,7 @@ function addProduct() {
             // Lưu lại danh sách sản phẩm vào local storage
             localStorage.setItem('ArrayListProducts', JSON.stringify(ArrayListProducts));
 
+            // Call the render function to update the table
             render();
          
             alert('Sản phẩm đã được thêm vào dữ liệu.');
@@ -56,7 +57,7 @@ function addProduct() {
         if (productImage) {
             reader.readAsDataURL(productImage);
         } else {
-         
+            // If no image is selected, set a default image (you can modify this as needed)
             reader.readAsDataURL(new Blob([]));
         }
     } else {
@@ -64,14 +65,15 @@ function addProduct() {
     }
 }
 function editProduct(id) {
-
+// Get existing products from local storage
 var ArrayListProducts = JSON.parse(localStorage.getItem('ArrayListProducts')) || [];
 
+// Find the product by ID
 var productIndex = ArrayListProducts.findIndex(product => product.id === id);
 
-
+// Populate the edit modal with current product data
 if (productIndex !== -1) {
-    document.getElementById('productID').value = ArrayListProducts[productIndex].id; 
+    document.getElementById('productID').value = ArrayListProducts[productIndex].id; // Set the product ID for saving
     document.getElementById('editProductName').value = ArrayListProducts[productIndex].name;
     document.getElementById('editProductPrice').value = ArrayListProducts[productIndex].price;
     document.getElementById('editProductfirm').value = ArrayListProducts[productIndex].thuonghieu;
@@ -80,9 +82,11 @@ if (productIndex !== -1) {
     document.getElementById('editProductSSD').value = ArrayListProducts[productIndex].ssd;
     document.getElementById('editProductVGA').value = ArrayListProducts[productIndex].vga;
 
+    // Display existing image in the modal
     var existingImage = document.getElementById('existingImage');
     existingImage.src = ArrayListProducts[productIndex].img;
 
+    // Display the selected image (if any)
     var selectedImage = document.getElementById('selectedImage');
     selectedImage.style.display = 'none';
 
@@ -94,6 +98,7 @@ if (productIndex !== -1) {
 }
 
 function removeExistingImage() {
+// Clear the existing image and reset the input field
 var existingImage = document.getElementById('existingImage');
 existingImage.src = '';
 
@@ -102,11 +107,13 @@ editProductImageInput.value = '';
 }
 
 function saveEditedProduct() {
-
+// Get existing products from local storage
 var ArrayListProducts = JSON.parse(localStorage.getItem('ArrayListProducts')) || [];
 
+// Find the product by ID
 var productIndex = ArrayListProducts.findIndex(product => product.id === document.getElementById('productID').value);
 
+// Update the product if found
 if (productIndex !== -1) {
     // Update the product properties
     ArrayListProducts[productIndex].name = document.getElementById('editProductName').value;
@@ -117,7 +124,7 @@ if (productIndex !== -1) {
     ArrayListProducts[productIndex].ssd = document.getElementById('editProductSSD').value;
     ArrayListProducts[productIndex].vga = document.getElementById('editProductVGA').value;
 
-   
+    // Update image if a new one is selected
     var editProductImageInput = document.getElementById('editProductImageInput');
     if (editProductImageInput.files.length > 0) {
         var reader = new FileReader();
@@ -125,13 +132,13 @@ if (productIndex !== -1) {
             ArrayListProducts[productIndex].img = e.target.result;
             selectedImage.src = e.target.result;
             selectedImage.style.display = 'block';}
-           
+            // Update local storage
             localStorage.setItem('ArrayListProducts', JSON.stringify(ArrayListProducts));
 
-         
+            // Close the edit modal
             closeEditModal();
 
-            
+            // Call render to update the table
             render();
         };
         reader.readAsDataURL(editProductImageInput.files[0]);} 
@@ -145,12 +152,13 @@ if (productIndex !== -1) {
                 ArrayListProducts[productIndex].img = null;
             }
 
-    
+        // Update local storage
         localStorage.setItem('ArrayListProducts', JSON.stringify(ArrayListProducts));
 
+        // Close the edit modal
         closeEditModal();
 
-        
+        // Call render to update the table
         render();
     }
     
@@ -165,10 +173,10 @@ function closeEditModal() {
 }
 
 function render() {
-   
+    // Get existing ArrayListProducts from local storage
     var ArrayListProducts = JSON.parse(localStorage.getItem('ArrayListProducts')) || [];
 
-   
+    // Reinitialize the table header
     var table = `<tr>
     <th>ID</th>
     <th>Tên</th>
@@ -183,7 +191,7 @@ function render() {
     <th>Action</th>
                 </tr>`;
 
-
+    // Populate the table with product data
     for (let i = 0; i < ArrayListProducts.length; i++) {
         table += `<tr>
                     <td>${ArrayListProducts[i].id}</td>
@@ -203,28 +211,28 @@ function render() {
                 </tr>`;
     }
 
-   
+    // Update the table content
     document.getElementById("render").innerHTML = table;
 }
 function deleteProduct(id) {
   var result=  confirm("Ban co muon xoa san pham");
   if(result == true) {
-
+// Get existing products from local storage
 var ArrayListProducts = JSON.parse(localStorage.getItem('ArrayListProducts')) || [];
 
-
+// Find the product index by ID
 var productIndex = ArrayListProducts.findIndex(product => product.id === id);
 
-
+// Delete the product if found
 if (productIndex !== -1) {
-
+// Remove the product from the array
 
 ArrayListProducts.splice(productIndex, 1);
 
-
+// Save the updated ArrayListProducts to local storage
 localStorage.setItem('ArrayListProducts', JSON.stringify(ArrayListProducts));
 
-
+// Call render to update the table
 render();
 
 alert('Sản phẩm đã được xóa khỏi dữ liệu.');
